@@ -8,3 +8,7 @@
      - Link each cluster center with the cluster points
      - Check if the line between cluster center and cluster points intersects with the obstacle, if yes, discard that cluster point
 4. Search for shortest path from start to end node using the Dijksta's shortest path algorithm.
+
+## Execution of script
+
+Run the PRM_Algorithm_Main.py file
