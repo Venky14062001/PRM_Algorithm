@@ -45,6 +45,8 @@ def generate_random_point(env_object):
 
 '''Create a list of n number of random points not colliding with obstacles'''
 def list_random_points(env_object, no_of_points):
+    global random_points_list
+    
     random_points_list=[]
 
     for i in range(no_of_points):
@@ -140,3 +142,15 @@ def create_non_intersecting_cluster_point_objects(cluster_points, cluster_center
             list_non_intersecting_cluster_point_objects.append(cluster_points[i])
 
     return list_non_intersecting_cluster_point_objects
+
+'''Function to convert the non intersecting point objects to a list'''
+def convert_from_non_intersecting_cluster_point_objects_to_dataframe(list_non_intersecting_points):
+    global list_non_intersecting_cluster
+    
+    # Create a list to contain the cluster coordinates
+    list_non_intersecting_cluster=[]
+    
+    for i in range(len(list_non_intersecting_points)):
+        list_non_intersecting_cluster.append((list_non_intersecting_points[i][0].x,list_non_intersecting_points[i][0].y,list_non_intersecting_points[i][1]))
+        
+    return list_non_intersecting_cluster
